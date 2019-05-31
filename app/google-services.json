@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "917764886497",
+    "firebase_url": "https://iesbaulaandroid.firebaseio.com",
+    "project_id": "iesbaulaandroid",
+    "storage_bucket": "iesbaulaandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917764886497:android:6db21e3a54fadbc2",
+        "android_client_info": {
+          "package_name": "br.iesb.android.opiniaodetudo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917764886497-mciredoqna1mhu48qo20q16clbang69e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.iesb.android.opiniaodetudo",
+            "certificate_hash": "2281d9cfc2c1d8429fd9ea270386fc3a31895d7f"
+          }
+        },
+        {
+          "client_id": "917764886497-vjcniifcp9aqoe88oo7lip0d1pobmak5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGKlKxgUsANvD-brrGIStRzH3mv27d19k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917764886497-vjcniifcp9aqoe88oo7lip0d1pobmak5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
