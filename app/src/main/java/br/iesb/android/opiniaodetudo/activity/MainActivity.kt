@@ -51,17 +51,16 @@ class MainActivity : AppCompatActivity() {
         chooseTheme()
         setContentView(R.layout.activity_main)
 
-
-        configureBottomMenu()
-        configureAutoHiddenKeyboard()
-        askForGPSPermission()
-        logToken()
-
         if(isImageShare(intent)){
             handleImageShare(intent)
         }else if(savedInstanceState == null){
             navigateTo(FORM_FRAGMENT)
         }
+
+        configureBottomMenu()
+        configureAutoHiddenKeyboard()
+        askForGPSPermission()
+        logToken()
     }
 
     private fun logToken() {
@@ -111,7 +110,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun askForGPSPermission() {
         if(ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
 
             ActivityCompat.requestPermissions(
                 this,
@@ -120,24 +119,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
     }
-
-//    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        when(requestCode){
-//            GPS_PERMISSION_REQUEST -> {
-//                if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-//                    Toast.makeText(this,"Permissão para usar o GPS concedida",
-//                        Toast.LENGTH_SHORT)
-//                        .show()
-//                }
-//            }
-//        }
-//    }
-override fun onResume() {
-    super.onResume()
-    handleImageShare(intent)
-}
-
 
     private fun chooseTheme() {
         val nightMode = PreferenceManager.getDefaultSharedPreferences(this)

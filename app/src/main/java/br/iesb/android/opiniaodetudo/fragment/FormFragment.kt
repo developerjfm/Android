@@ -63,7 +63,7 @@ class FormFragment : Fragment(){
                     if (reviewToEdit == null) {
                         entity = repository.save(name.toString(),
                             review.toString(),
-                            file?.toRelativeString(activity!!.filesDir), thumbnailBytes)
+                            file!!.toRelativeString(activity!!.filesDir), thumbnailBytes)
                     } else {
                         entity = repository.update(reviewToEdit.id, name.toString(), review.toString())
                     }
@@ -215,33 +215,4 @@ class FormFragment : Fragment(){
     }
 }
 
-//    fun handleImageShare() {
-//        val intentParam = activity!!.intent
-//        if(intentParam?.action == Intent.ACTION_SEND) {
-//            intentParam?.extras.get(Intent.EXTRA_SUBJECT)?.let {
-//                mainView.findViewById<EditText>(R.id.input_nome).setText(it as String)
-//            }
-//            intentParam?.extras.get(Intent.EXTRA_TEXT)?.let {
-//                mainView.findViewById<EditText>(R.id.input_review).setText(it as String)
-//            }
-//            intentParam?.extras.get(Intent.EXTRA_STREAM)?.let {
-//                val fileName = "${System.nanoTime()}.jpg"
-//                file = File(activity!!.filesDir, fileName)
-//                IOUtils.copyStream(
-//                    activity!!.contentResolver.openInputStream(it as Uri),
-//                    FileOutputStream(file)
-//                )
-//                val photoView = mainView.findViewById<ImageView>(R.id.photo)
-//                val bitmap = BitmapFactory.decodeStream(FileInputStream(file))
-//                val targetSize = 100
-//                val thumbnail = ThumbnailUtils.extractThumbnail(
-//                    bitmap,
-//                    targetSize,
-//                    targetSize
-//                )
-//                photoView.setImageBitmap(thumbnail)
-//                generateThumbnailBytes(thumbnail, targetSize)
-//            }
-//        }
-//    }
 
